@@ -46,10 +46,10 @@ jobs:
           trap 'rm -f ~/.ssh/id_rsa' EXIT
 
           # SSH into EC2 and run deployment steps
-          ssh -o StrictHostKeyChecking=no ubuntu@54.210.81.95 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@44.206.237.162 << 'EOF'
 
             # Pull the latest code or rebuild the Docker container
-            cd ~/fastapi-app/fastapi-book-project
+            cd ~/fastapi-book-project
             git pull origin main  # For using git to fetch the latest code
 
             # For docker to rebuild the app container
